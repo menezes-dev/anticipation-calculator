@@ -15,9 +15,9 @@ const CalcProvider = ({ children }) => {
 
     api
       .post("", {
-        amount: +amount,
-        installments: +installments,
-        mdr: +mdr,
+        amount: amount,
+        installments: installments,
+        mdr: mdr,
       })
       .then((response) => setResponse(response.data))
       .catch((err) => console.log(err));
