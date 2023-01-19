@@ -21,6 +21,8 @@ export const Container = styled.div`
     font-weight: 700;
     font-style: italic;
 
+    border-bottom: 1px solid var(--color-blue-2);
+
     color: var(--color-blue-2);
   }
 
