@@ -45,6 +45,8 @@ export const Container = styled.div`
     border: 1px solid var(--color-white-1);
     border-radius: 4px;
 
+    padding-left: 10px;
+
     :focus {
       outline-color: var(--color-blue-0);
     }
