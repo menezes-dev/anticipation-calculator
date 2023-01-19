@@ -1,9 +1,13 @@
 import "./App.css";
+import Card from "./components/Card";
+import CalcProvider from "./contexts";
 
 function App() {
   return (
     <div className="App">
-      <span></span>
+      <CalcProvider>
+        <Card />
+      </CalcProvider>
     </div>
   );
 }
