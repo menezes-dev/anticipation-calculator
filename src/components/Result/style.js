@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 
   border: 1px solid var(--color-white-2);
   border-left: none;
@@ -20,6 +20,8 @@ export const Container = styled.div`
     font-size: 16px;
     font-weight: 700;
     font-style: italic;
+
+    border-bottom: 1px solid var(--color-blue-2);
 
     color: var(--color-blue-2);
   }

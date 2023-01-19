@@ -5,20 +5,11 @@ import api from "../services/api";
 export const CalcContext = createContext();
 
 const CalcProvider = ({ children }) => {
-  const [amount, setAmount] = useState("");
-  const [installments, setInstallments] = useState("");
-  const [mdr, setMdr] = useState("");
   const [response, setResponse] = useState({ 1: 0, 15: 0, 30: 0, 90: 0 });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
+  const onSubmit = (data) => {
     api
-      .post("", {
-        amount: +amount,
-        installments: +installments,
-        mdr: +mdr,
-      })
+      .post("", data)
       .then((response) => setResponse(response.data))
       .catch((err) => console.log(err));
   };
@@ -26,14 +17,8 @@ const CalcProvider = ({ children }) => {
   return (
     <CalcContext.Provider
       value={{
-        amount,
-        installments,
-        mdr,
         response,
-        setAmount,
-        setInstallments,
-        setMdr,
-        handleSubmit,
+        onSubmit,
       }}
     >
       {children}
