@@ -12,6 +12,8 @@ export const Container = styled.div`
     font-weight: 700;
     font-style: italic;
 
+    border-bottom: none;
+
     color: var(--color-blue-2);
   }
 `;
